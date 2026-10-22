@@ -1,0 +1,480 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0bcbc;
+}
+
+header {
+    background-color: #8b2222;
+    color: #fff;
+    padding: 10px 20px; 
+    border-bottom-style: solid;
+    border-color: #fff;
+    border-width: thin;
+}
+
+#NavLogo {          
+    margin-right: 12px;     
+    height: 40px;           
+    width: auto;            
+}
+
+#Logo {
+    float: right;
+    margin-right: 6px;
+    height: 15rem;           
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Empurra o grupo da esquerda para a esquerda e o da direita para a direita */
+    align-items: center;            
+    width: 100%;               
+    padding: 0 20px;                
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Grupo da Esquerda (Logo + Título) */
+.menu-esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.menu-esquerda img{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #e0bcbc;
+    border-width: thin;
+}
+
+.menu-esquerda h4 {
+    margin: 0;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* Grupo da Direita (Links de navegação) */
+.menu-direita {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-direita li {
+    margin-left: 20px; 
+}
+
+.menu-direita li a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap; /* Impede que o texto dos botões quebre linha */
+}
+
+
+
+
+
+
+#home .item{
+    display: grid;
+    justify-items: center;
+}
+
+#home .item h1{
+    text-align: center;
+}
+
+#home .item img{
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #8b2222;
+    border-width: thin;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+#Agendamento .item h1{
+    text-align: center;
+}
+
+#PaginaInstitucional .item h1{
+    text-align: center;
+}
+
+#Patrocinadores .item h1{
+    text-align: center;
+}
+
+#FAQ .item h1{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Alinha a seção de cadastro no centro e limita a largura */
+#CadastroCliente {
+    max-width: 400px;
+    margin: 30px auto;
+    width: 100%;
+}
+
+
+#CadastroCliente .item {
+    display: grid;
+    justify-items: center;
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #8b2222;
+    border-width: thin;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+
+#CadastroCliente h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+
+#CadastroCliente form {
+    width: 100%;
+    max-width: 300px; /* Mantém os campos com um tamanho elegante */
+}
+
+/* Transforma os textos das labels em blocos para alinhar à esquerda */
+#CadastroCliente form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Faz todos os inputs ficarem do mesmo tamanho e alinhados */
+#CadastroCliente form input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não passe do limite da caixa */
+    padding: 6px;
+}
+
+#CadastroCliente form button[type="submit"] {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+#CadastroCliente p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Botão de Criar Conta (Cadastro) */
+#CadastroCliente button[type="submit"] {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0;
+    display: grid;
+    justify-items: center;
+}
+#CadastroCliente button[type="submit"]:hover {
+    background: #218838;
+}
+
+
+
+
+
+
+
+
+#LoginCliente .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;  
+    width: 100%;       
+    margin: 30px auto; 
+}
+
+#LoginCliente .item {
+    background-color: #f1f1f1; 
+    padding: 30px;             
+    margin: 10px;
+    flex: 1 1 300px;
+    text-align: center;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #8b2222;
+    border-width: thin;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    display: grid;
+    justify-items: center;
+}
+
+#LoginCliente h1{
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Faz o formulário ocupar o tamanho correto dentro da caixinha */
+#LoginCliente form {
+    width: 100%;
+    max-width: 300px; 
+}
+
+/* Transforma os textos das labels em blocos alinhados à esquerda */
+#LoginCliente form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Faz as caixas de input do login ficarem simétricas e do mesmo tamanho */
+#LoginCliente form input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 6px;
+}
+
+/* Centraliza o botão de entrar no meio do formulário */
+#LoginCliente form button[type="submit"] {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+#LoginCliente p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Botão de Entrar (Login) */
+#LoginCliente button[type="submit"] {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0;
+}
+#LoginCliente button[type="submit"]:hover {
+    background: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+#Patrocinadores {
+    width: 100%;       
+    margin: 30px auto; 
+}
+
+/* O Flexbox agora é aplicado na div que envolve diretamente os blocos */
+#Patrocinadores .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 900px; /* Espaço expandido para caberem lado a lado */
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Força o título H1 a ocupar 100% da largura, empurrando os blocos para baixo */
+#Patrocinadores h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#pizzariadelights {
+    background-color: #ff9900; 
+    padding: 30px;             
+    flex: 1 1 350px;    
+    max-width: 400px;   /* Evita que cresça demais em telas gigantes */
+    text-align: center;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: thin;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    justify-items: center;
+    color: #fff;
+}
+
+#empresagenerica {
+    background-color: #0059ff; 
+    padding: 30px;             
+    flex: 1 1 350px;    
+    max-width: 400px;   /* Evita que cresça demais em telas gigantes */
+    text-align: center;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: thin;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    justify-items: center;
+    color: #fff;
+}
+
+/* Seletor corrigido para o H2 interno dos blocos */
+#Patrocinadores .box1 h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#Patrocinadores p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#Patrocinadores a {
+    color: #fff;
+}
+
+
+
+#FAQ {
+    width: 100%;       
+    margin: 30px auto; 
+}
+
+/* O Flexbox agora é aplicado na div que envolve diretamente os blocos */
+#FAQ .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 900px; /* Espaço expandido para caberem lado a lado */
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+#FAQ h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#FAQ1 {
+    background-color: #f3c9c9; 
+    padding: 30px;             
+    flex: 1 1 350px;    
+    max-width: 400px;   /* Evita que cresça demais em telas gigantes */
+    text-align: center;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #20a13c;
+    border-width: medium;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    justify-items: center;
+    color: #20a13c;
+}
+
+#formulario {
+    background-color: #f3c9c9; 
+    padding: 30px;             
+    flex: 1 1 350px;    
+    max-width: 400px;   /* Evita que cresça demais em telas gigantes */
+    text-align: center;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #20a13c;
+    border-width: medium;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    justify-items: center;
+    color: #20a13c;
+}
+
+/* Seletor corrigido para o H2 interno dos blocos */
+#FAQ .box1 h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#FAQ p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#FAQ a {
+    color: #20a13c;
+}
+
+
+
+
+footer {
+    background-color: #8b2222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-color: #fff;
+    border-width: thin;
+    border-top-style: solid;
+}
