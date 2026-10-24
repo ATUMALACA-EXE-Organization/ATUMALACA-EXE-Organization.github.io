@@ -470,7 +470,7 @@ nav {
 
 
 
-/* Container Principal (#home): alinha os elementos na vertical e separa a logo dos cards */
+
 #home {
     display: flex;
     flex-direction: column;
@@ -479,7 +479,7 @@ nav {
     padding: 20px;
 }
 
-/* Área da Logo e Título */
+
 .item {
     text-align: center;
     margin-bottom: 10px;
@@ -497,18 +497,19 @@ nav {
     margin: 0 auto;
 }
 
-/* Estilo de cada Bloco/Cartão */
+
 .box2 {
     flex: 1 1 0; /* Faz todos os 4 blocos terem exatamente a mesma largura */
-    max-width: 280px; /* Reduzido levemente para caberem os 4 lado a lado */
+    max-width: 280px; 
     min-height: 120px;
     
-    background-color: #20a13c; /* Cor verde conforme a imagem */
+    background-color: #20a13c; 
     color: white;
     padding: 20px 15px;
     border-radius: 8px;
     border-style: solid;
     border-color: #fff;
+    border-width: thin;
     text-align: center;
     
     display: flex;
@@ -517,7 +518,7 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Caso queira manter os links com texto branco e sem sublinhado */
+
 .box2 a {
     color: white;
     text-decoration: none;
