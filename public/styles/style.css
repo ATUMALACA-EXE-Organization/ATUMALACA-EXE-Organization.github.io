@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0bcbc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagens fluidas anti-quebra */
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background-color: #8b2222;
+    color: #fff;
+    padding: 10px 0; 
+    border-bottom: thin solid #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;            
+    width: 100%;               
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;                
+}
+
+.menu-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#NavLogo {          
+    height: 40px;           
+    width: auto;            
+    border-radius: 5px;
+    border: thin solid #e0bcbc;
+}
+
+.menu-esquerda h4 {
+    margin: 0;
+    color: #fff;
+}
+
+.menu-direita {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.menu-direita li a {
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+}
+
+#home .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#home .item h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#home .item img {
+    border-radius: 15px;
+    border: thin solid #8b2222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+/* Imagem da Logo grande */
+#Logo {
+    height: 15rem;           
+    width: auto;
+    margin: 10px auto;
+}
+
+/* Contentor dos Cartões Verdes */
+.container-boxes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões quebrem linha se necessário */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.box2 {
+    flex: 1 1 250px; /* Base flexível para se ajustar a qualquer ecrã */
+    max-width: 280px; 
+    min-height: 120px;
+    background-color: #20a13c; 
+    color: white;
+    padding: 20px 15px;
+    border-radius: 8px;
+    border: thin solid #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box2 a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+#CadastroCliente, #LoginCliente .container {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+#CadastroCliente .item, #LoginCliente .item {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 8px;
+    border: thin solid #8b2222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#CadastroCliente h1, #LoginCliente h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#CadastroCliente form, #LoginCliente form {
+    width: 100%;
+}
+
+#CadastroCliente form label, #LoginCliente form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#CadastroCliente form input, #LoginCliente form input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Botões de Ação */
+#CadastroCliente button[type="submit"], #LoginCliente button[type="submit"] {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+#CadastroCliente button[type="submit"]:hover, #LoginCliente button[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Div dos Termos */
+#CadastroCliente form div.termos {
+    display: flex;            
+    align-items: center;      
+    justify-content: center;  
+    gap: 8px;                 
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+#CadastroCliente form div.termos input[type="checkbox"] {
+    width: auto;              
+    margin: 0;                
+    cursor: pointer;
+}
+
+#CadastroCliente strong u, #LoginCliente strong u {
+    color: #8b2222;
+}
+
+#CadastroCliente p, #LoginCliente p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#Patrocinadores, #FAQ, #Agendamento, #PaginaInstitucional {
+    width: 100%;       
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+#Patrocinadores h1, #FAQ h1, #Agendamento .item h1, #PaginaInstitucional .item h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Patrocinadores .item, #FAQ .item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Blocos específicos */
+#pizzariadelights, #empresagenerica, #FAQ1, #formulario {
+    padding: 30px;             
+    flex: 1 1 300px;    
+    max-width: 400px;   
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+#pizzariadelights { background-color: #ff9900; border: thin solid #fff; }
+#empresagenerica { background-color: #0059ff; border: thin solid #fff; }
+#FAQ1, #formulario { background-color: #f3c9c9; border: medium solid #20a13c; color: #20a13c; }
+
+#Patrocinadores a { color: #fff; }
+#FAQ a { color: #20a13c; }
+
+#redessociais .box3 {
+    margin-left: 30px;
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: #8b2222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    border-top: thin solid #fff;
+    margin-top: auto; /* Garante que o rodapé fica sempre no fim da página */
+}
+
+/* DISPOSITIVOS MÓVEIS (Ecrãs até 768px) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .menu-direita {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .menu-direita li {
+        width: 100%;
+    }
+
+    .menu-direita li a {
+        display: block;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+
+    #Logo {
+        height: auto;
+        max-width: 160px;
+    }
+
+    .container-boxes {
+        padding: 10px;
+    }
+
+    .box2 {
+        flex: 1 1 100%; /* Cartões ocupam a largura total no telemóvel */
+        max-width: 100%;
+    }
+
+    #pizzariadelights, #empresagenerica, #FAQ1, #formulario {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* MONITOR GIGANTE / TV (Acima de 1440px) */
+@media screen and (min-width: 1440px) {
+    nav, .container-boxes {
+        max-width: 1300px;
+    }
+    html {
+        font-size: 105%;
+    }
+}
