@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS barbearia_santa_rosa
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE barbearia_santa_rosa;
+
+CREATE TABLE IF NOT EXISTS clientes (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(120) NOT NULL,
+  telefone VARCHAR(20) NOT NULL,
+  email VARCHAR(254) NOT NULL,
+  senha_hash VARCHAR(255) NOT NULL,
+  aceitou_termos BOOLEAN NOT NULL DEFAULT FALSE,
+  data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  data_atualizacao TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id),
+  UNIQUE KEY uq_clientes_email (email)
+) ENGINE=InnoDB;
