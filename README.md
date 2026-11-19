@@ -15,6 +15,11 @@ Telas do protótipo:
 
 Task relacionada: #5 (Protótipo no Google Stitch), no projeto "Projeto da Barbearia Santa Rosa".
 
+## Diagrama de Classes do Projeto
+
+Diagrama:
+https://github.com/ATUMALACA-EXE-Organization/ATUMALACA-EXE-Organization.github.io/blob/main/diagrama_de_classes.pdf
+
 ## Integrantes
 
 - Juan Olivio Palmeiras
