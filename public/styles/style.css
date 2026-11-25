@@ -12,7 +12,6 @@ body {
     flex-direction: column;
 }
 
-/* Imagens fluidas anti-quebra */
 img, video {
     max-width: 100%;
     height: auto;
@@ -49,6 +48,25 @@ nav {
     border: thin solid #e0bcbc;
 }
 
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.texto {
+    text-align: left;
+}
+
+.texto h2 {
+    font-size: 2.5rem;
+}
+
+.texto p {
+    font-size: 1.5rem;
+}
 .menu-esquerda h4 {
     margin: 0;
     color: #fff;
@@ -89,24 +107,20 @@ nav {
     margin-bottom: 20px;
 }
 
-#home .item img {
-    border-radius: 15px;
-    border: thin solid #8b2222;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-}
-
-/* Imagem da Logo grande */
 #Logo {
-    height: 15rem;           
-    width: auto;
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 25%;
+    border: 3px solid #b01e1e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     margin: 10px auto;
 }
 
-/* Contentor dos Cartões Verdes */
 .container-boxes {
     display: flex;
-    flex-wrap: wrap; /* Permite que os cartões quebrem linha se necessário */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -117,10 +131,10 @@ nav {
 }
 
 .box2 {
-    flex: 1 1 250px; /* Base flexível para se ajustar a qualquer ecrã */
+    flex: 1 1 250px;
     max-width: 280px; 
     min-height: 120px;
-    background-color: #20a13c; 
+    background-color: #062906; 
     color: white;
     padding: 20px 15px;
     border-radius: 8px;
@@ -132,16 +146,21 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.box2 a {
+.box2 a{
     color: white;
     text-decoration: none;
     width: 100%;
     display: block;
+
 }
 
-#CadastroCliente, #LoginCliente .container {
+.box2 a:hover{
+    text-decoration: underline;
+}
+
+#CadastroCliente, #LoginCliente{
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     margin: 30px auto;
     padding: 0 15px;
 }
@@ -168,7 +187,7 @@ nav {
     display: block;
     text-align: left;
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 #CadastroCliente form input, #LoginCliente form input {
@@ -178,9 +197,42 @@ nav {
     box-sizing: border-box;
 }
 
-/* Botões de Ação */
+/* tira os espaços enormes entre os campos (vêm de <br> no HTML) */
+#CadastroCliente form br,
+#LoginCliente form br {
+    display: none;
+}
+
+/* campos mais agradáveis de preencher */
+#CadastroCliente form input:not([type="checkbox"]),
+#LoginCliente form input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+#CadastroCliente form input:focus,
+#LoginCliente form input:focus {
+    outline: none;
+    border-color: #8b2222;
+    box-shadow: 0 0 0 2px rgba(139, 34, 34, 0.2);
+}
+
+/* links do formulário (o "Esqueceu sua senha?" estava roxo, cor padrão do navegador) */
+#CadastroCliente a,
+#LoginCliente a {
+    color: #8b2222;
+}
+
+/* o hover do botão estava igual à cor normal */
+#CadastroCliente button[type="submit"]:hover,
+#LoginCliente button[type="submit"]:hover {
+    background: #0a4a0a;
+}
+
 #CadastroCliente button[type="submit"], #LoginCliente button[type="submit"] {
-    background: #28a745;
+    background: #062906;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -192,10 +244,9 @@ nav {
 }
 
 #CadastroCliente button[type="submit"]:hover, #LoginCliente button[type="submit"]:hover {
-    background: #218838;
+    background: #062906;
 }
 
-/* Div dos Termos */
 #CadastroCliente form div.termos {
     display: flex;            
     align-items: center;      
@@ -257,7 +308,7 @@ nav {
 #FAQ1, #formulario { background-color: #f3c9c9; border: medium solid #20a13c; color: #20a13c; }
 
 #Patrocinadores a { color: #fff; }
-#FAQ a { color: #20a13c; }
+#FAQ a { color: #062906; }
 
 #redessociais .box3 {
     margin-left: 30px;
@@ -276,6 +327,9 @@ footer {
 
 /* DISPOSITIVOS MÓVEIS (Ecrãs até 768px) */
 @media screen and (max-width: 768px) {
+    #CadastroCliente .item, #LoginCliente .item {
+    padding: 20px;
+    } 
     nav {
         flex-direction: column;
         gap: 15px;
@@ -300,8 +354,8 @@ footer {
     }
 
     #Logo {
-        height: auto;
-        max-width: 160px;
+        width: 180px;
+        height: 180px;
     }
 
     .container-boxes {
@@ -309,10 +363,10 @@ footer {
     }
 
     .box2 {
-        flex: 1 1 100%; /* Cartões ocupam a largura total no telemóvel */
+        flex: 1 1 100%;
         max-width: 100%;
     }
-
+   
     #pizzariadelights, #empresagenerica, #FAQ1, #formulario {
         flex: 1 1 100%;
         max-width: 100%;
