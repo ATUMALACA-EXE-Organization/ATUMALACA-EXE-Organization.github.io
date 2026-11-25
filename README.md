@@ -1,5 +1,5 @@
 # Barbearia Santa Rosa 
-Site do Salão e Barbearia Santa Rosa, desenvolvido pelo grupo ATUMALACA>EXE(Fatec Sorocaba, ADS).
+Site do Salão e Barbearia Santa Rosa, desenvolvido pelo grupo ATUMALACA.EXE(Fatec Sorocaba, ADS).
 
 # Protótipo
 
