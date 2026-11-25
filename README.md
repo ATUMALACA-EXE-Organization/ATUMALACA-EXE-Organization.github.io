@@ -11,7 +11,7 @@ Diagrama de classes do projeto:
 
 https://github.com/ATUMALACA-EXE-Organization/ATUMALACA-EXE-Organization.github.io/blob/main/diagrama_de_classes.pdf
 
-# Link do Sie
+# Link do Site
 
 https://barbearia-santa-rosa.onrender.com
 
