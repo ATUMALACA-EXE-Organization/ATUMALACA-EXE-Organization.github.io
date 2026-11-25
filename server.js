@@ -168,11 +168,13 @@ app.get('/test-db', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('Erro na conexão:', error);
+    console.error('ERRO COMPLETO D TIDB:', error);
 
     res.status(500).json({
       sucesso: false,
-      erro: error.message
+      codigo: error.code || null,
+      mensagem: error.message || 'Erro sem mensagem',
+      errno: error.errno || null
     });
   }
 });
