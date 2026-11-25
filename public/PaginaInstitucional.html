@@ -17,12 +17,14 @@
 
     <!-- Grupo da Direita: Apenas os botões de navegar -->
     <ul class="menu-direita">
-                <li><a href="PaginaInstitucional.html">Institucional</a></li>
-                <li><a href="LoginCliente.html">Login</a></li>
-                <li><a href="CadastroCliente.html">Cadastro</a></li>
                 <li><a href="#">Agendamento</a></li>
                 <li><a href="#">Patrocinadores</a></li>
                 <li><a href="#">FAQ</a></li>
+
+                <div id="area-usuario">
+                    <a href="LoginCliente.html">Entrar </b></a>
+                    <a href="CadastroCliente.html">Cadastrar</a>
+                </div>
     </ul>
 </nav>
     </header>
@@ -62,5 +64,33 @@
      <footer>
         <p>&copy; "Grupo ATUMALACA.EXE". Todos os direitos reservados.</p>
     </footer>
+<script>
+async function verificarSessao() {
+    const area = document.getElementById('area-usuario');
+
+    if (!area) return;
+
+    try {
+        const resposta = await fetch('/api/sessao');
+        const dados = await resposta.json();
+
+        if (dados.logado) {
+            area.innerHTML = `
+                <span>Olá, ${dados.cliente.nome}!</span>
+                <a href="/logout">Sair</a>
+            `;
+        } else {
+            area.innerHTML = `
+                <a href="/LoginCliente.html">Entrar</a>
+                <a href="/CadastroCliente.html">Cadastrar</a>
+            `;
+        }
+    } catch (erro) {
+        console.error('Erro ao verificar sessão:', erro);
+    }
+}
+
+verificarSessao();
+</script>
 </body>
 </html>
