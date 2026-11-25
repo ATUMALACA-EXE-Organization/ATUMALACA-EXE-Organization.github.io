@@ -16,15 +16,18 @@
     </div>
 
     <!-- Grupo da Direita: Apenas os botões de navegar -->
-    <ul class="menu-direita">
-                <li><a href="#">Agendamento</a></li>
-                <li><a href="#">Patrocinadores</a></li>
-                <li><a href="#">FAQ</a></li>
+   <ul class="menu-direita">
+        <li><a href="#">Agendamento</a></li>
+        <li><a href="#">Patrocinadores</a></li>
+        <li><a href="#">FAQ</a></li>
 
-                <div id="area-usuario">
-                    <a href="LoginCliente.html">Entrar </b></a>
-                    <a href="CadastroCliente.html">Cadastrar</a>
-                </div>
+        <li id="area-usuario">
+            <a href="LoginCliente.html">Entrar</a>
+        </li>
+
+        <li id="area-cadastro">
+            <a href="CadastroCliente.html">Cadastrar</a>
+        </li>
     </ul>
 </nav>
     </header>
@@ -65,26 +68,71 @@
         <p>&copy; "Grupo ATUMALACA.EXE". Todos os direitos reservados.</p>
     </footer>
 <script>
+
 async function verificarSessao() {
     const area = document.getElementById('area-usuario');
+    const cadastro = document.getElementById('area-cadastro');
 
-    if (!area) return;
+    if (!area || !cadastro) return;
 
     try {
         const resposta = await fetch('/api/sessao');
         const dados = await resposta.json();
 
         if (dados.logado) {
-            area.innerHTML = `
-                <span>Olá, ${dados.cliente.nome}!</span>
-                <a href="/logout">Sair</a>
+            // Cria a área de identificação do usuário
+            const usuario = document.createElement('div');
+            usuario.className = 'usuario-logado';
+
+            // Saudação
+            const saudacao = document.createElement('div');
+            saudacao.className = 'saudacao-usuario';
+
+            const nome = document.createElement('span');
+            nome.className = 'nome-usuario';
+            nome.textContent = `Olá, ${dados.cliente.nome}!`;
+
+            const mensagem = document.createElement('small');
+            mensagem.textContent = 'Bem-vindo de volta';
+
+            saudacao.append(nome, mensagem);
+
+            // Bolinha de perfil
+            const perfil = document.createElement('div');
+            perfil.className = 'icone-perfil';
+            perfil.innerHTML = `
+                <svg viewBox="0 0 24 24" width="23" height="23"
+                     fill="none" stroke="currentColor"
+                     stroke-width="1.8" stroke-linecap="round">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>
+                </svg>
             `;
+
+            usuario.append(saudacao, perfil);
+
+            // Botão sair
+            const sair = document.createElement('a');
+            sair.href = '/logout';
+            sair.className = 'botao-sair';
+            sair.textContent = 'Sair';
+
+            area.replaceChildren(usuario, sair);
+
+            cadastro.style.display = 'none';
+
         } else {
             area.innerHTML = `
                 <a href="/LoginCliente.html">Entrar</a>
+            `;
+
+            cadastro.innerHTML = `
                 <a href="/CadastroCliente.html">Cadastrar</a>
             `;
+
+            cadastro.style.display = '';
         }
+
     } catch (erro) {
         console.error('Erro ao verificar sessão:', erro);
     }
