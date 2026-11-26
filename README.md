@@ -15,6 +15,11 @@ https://github.com/ATUMALACA-EXE-Organization/ATUMALACA-EXE-Organization.github.
 
 https://barbearia-santa-rosa.onrender.com
 
+# Tecnologias e Serviços Ultilizados
+
+•**TiDB Cloud**: Banco de dados em nuvem.
+•**Render**: Hospedagem do site e servidor.
+
 # Integrantes
 
 1. Juan Olivio Palmeiras
