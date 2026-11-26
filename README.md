@@ -15,10 +15,8 @@ https://github.com/ATUMALACA-EXE-Organization/ATUMALACA-EXE-Organization.github.
 
 https://barbearia-santa-rosa.onrender.com
 
-# Tecnologias e Serviços Utilizados
+# Serviços Utilizados
 
-- **Linguagens**: HTML, CSS, JS, SQL.
-- **MySQL**: Banco de dados.
 - **TiDB Cloud**: banco de dados em nuvem.
 - **Render**: hospedagem do site e servidor.
 
