@@ -18,7 +18,6 @@ https://barbearia-santa-rosa.onrender.com
 # Tecnologias e Serviços Ultilizados
 
 • **TiDB Cloud**: Banco de dados em nuvem.
-
 • **Render**: Hospedagem do site e servidor.
 
 # Integrantes
